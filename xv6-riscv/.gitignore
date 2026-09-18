@@ -1,0 +1,39 @@
+*~
+_*
+*.o
+*.d
+*.asm
+*.sym
+*.img
+vectors.S
+bootblock
+entryother
+initcode
+initcode.out
+kernelmemfs
+mkfs/mkfs
+kernel/kernel
+user/usys.S
+.gdbinit
+*.zip
+xv6.out*
+.vagrant/
+submissions/
+ph
+barrier
+/lab-*.json
+.DS_Store
+*.dSYM
+*.pcap
+TAGS
+*.bk
+
+# --- Milestone 1 handoff: these are DELIVERABLES here, not build output ---
+# The kernel ships prebuilt (there is no source and no Makefile to rebuild it), so
+# the upstream rules above -- which correctly treat these as artifacts in a source
+# tree -- must not apply. Without these three lines a clone has no kernel, no disk
+# image and no symbol table, and nothing boots.
+!fs.img
+!kernel/kernel
+!kernel/kernel.sym
+!user/usys.S
