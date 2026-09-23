@@ -1,0 +1,16 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0 -- /home/abdul_rahim/xv6_llm_runtime/.venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/abdul_rahim/xv6_llm_runtime
+collecting ... collected 8 items
+
+server/distinf_regression_test.py::test_ring_generates PASSED            [ 12%]
+server/distinf_regression_test.py::test_matches_single_node PASSED       [ 25%]
+server/distinf_regression_test.py::test_survives_worker_loss[mid_ring] SKIPPED [ 37%]
+server/distinf_regression_test.py::test_survives_worker_loss[tail] SKIPPED [ 50%]
+server/distinf_regression_test.py::test_capability_lie_is_refused SKIPPED [ 62%]
+server/distinf_regression_test.py::test_corrupted_output_is_not_detected[signflip] SKIPPED [ 75%]
+server/distinf_regression_test.py::test_corrupted_output_is_not_detected[zero] SKIPPED [ 87%]
+server/distinf_regression_test.py::test_capability_lie_above_probe_ceiling_is_accepted SKIPPED [100%]
+
+=================== 2 passed, 6 skipped in 213.63s (0:03:33) ===================

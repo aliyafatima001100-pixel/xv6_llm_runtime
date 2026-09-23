@@ -1,0 +1,19 @@
+Script started on 2026-09-21 22:32:14+05:00 [COMMAND="./boot.sh" TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="237" LINES="63"]
+
+xv6 kernel is booting
+
+Scheduler: Round Robin (Default)
+hart 1 starting
+hart 2 starting
+init: starting sh
+$ testftp
+[35mStarting LLM file transfer test...[0m
+[32mPASS    Successfully fetched tokenizer: 433869 bytes[0m
+[35m  Final SHA-256: 50a52ef822ee9e83de5ce9d0be0a025a773d019437f58b5ff9dcafb063ece361[0m
+[35m---[0m
+[32mPASS    Successfully fetched weights: 60816028 bytes[0m
+[35m  Final SHA-256: cd590644d963867a2b6e5a1107f51fad663c41d79c149fbecbbb1f95fa81f49a[0m
+[32mPASS   LLM file transfer test completed[0m
+$ QEMU: Terminated
+
+Script done on 2026-09-21 22:34:58+05:00 [COMMAND_EXIT_CODE="0"]

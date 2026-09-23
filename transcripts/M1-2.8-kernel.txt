@@ -1,0 +1,22 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0 -- /home/abdul_rahim/xv6_llm_runtime/.venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/abdul_rahim/xv6_llm_runtime
+collecting ... collected 14 items
+
+server/kernel_regression_test.py::test_case[thread_stack] PASSED         [  7%]
+server/kernel_regression_test.py::test_case[canary] PASSED               [ 14%]
+server/kernel_regression_test.py::test_case[mem_rlimit_as] PASSED        [ 21%]
+server/kernel_regression_test.py::test_case[mem_inherit] PASSED          [ 28%]
+server/kernel_regression_test.py::test_case[exec_rlimit] PASSED          [ 35%]
+server/kernel_regression_test.py::test_case[cpu_rlimit] PASSED           [ 42%]
+server/kernel_regression_test.py::test_case[cpu_sleep] PASSED            [ 50%]
+server/kernel_regression_test.py::test_case[cap_rlimit] PASSED           [ 57%]
+server/kernel_regression_test.py::test_case[getentropy] PASSED           [ 64%]
+server/kernel_regression_test.py::test_case[wx_reject] PASSED            [ 71%]
+server/kernel_regression_test.py::test_case[id_priv] PASSED              [ 78%]
+server/kernel_regression_test.py::test_canary_per_exec PASSED            [ 85%]
+server/kernel_regression_test.py::test_stack_aslr PASSED                 [ 92%]
+server/kernel_regression_test.py::test_usertests_clean PASSED            [100%]
+
+======================== 14 passed in 130.11s (0:02:10) ========================

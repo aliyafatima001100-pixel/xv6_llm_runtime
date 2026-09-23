@@ -1,0 +1,22 @@
+Remote debugging using localhost:26000
+0x0000000000001000 in ?? ()
+Breakpoint 1 at 0x80005856
+Continuing.
+
+Breakpoint 1, 0x0000000080005856 in sys_exec ()
+#0  0x0000000080005856 in sys_exec ()
+#1  0x00000000800014dc in syscall ()
+#2  0x0000000080001224 in usertrap ()
+#3  0x0000003ffffff124 in ?? ()
+a0             0x1	1
+a1             0x3fffffbdf8	274877890040
+a2             0x1	1
+0x1:	<error: Cannot access memory at address 0x1>
+0x1:	<error: Cannot access memory at address 0x1>
+sp             0x3fffffbdf0	0x3fffffbdf0
+s0             0x3fffffbfc0        0x3fffffbfc0
+Breakpoint 2 at 0x80005868
+Continuing.
+
+Breakpoint 2, 0x0000000080005868 in sys_exec ()
+0x3fffffbf08:	"sh"

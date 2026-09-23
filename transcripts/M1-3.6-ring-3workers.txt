@@ -1,0 +1,32 @@
+[sim] staging 4 prebuilt node image(s)...
+[sim] starting host mcast switch (weight server on the segment)...
+[sim] booting 4 node(s) (timeout 280s each)...
+[sim] master: expecting 3 worker(s), model 1 (stories15M), 32 tokens
+[sim] OK  worker1 registered (0.7s)
+[sim] OK  worker2 registered (0.6s)
+[sim] OK  worker3 registered (0.7s)
+[sim] OK  3 worker(s) registered (serialized)
+[sim] OK  layers assigned
+[sim] OK  worker1 shard resident (37s)
+[sim] OK  worker2 shard resident (38s)
+[sim] OK  worker3 shard resident (38s)
+[sim] OK  all shards resident -- generating
+
+[sim] ==== generated ====
+Once upon a time , there was a little girl named L ily . She loved to play outside in the sun sh ine . One day , she saw a big
+[sim] ===================
+[sim] ==================== run summary ====================
+[sim]  topology      master 10.0.0.2 + 3 worker(s) | model 1 (stories15M) | 32 steps
+[sim]  build         4 image(s) in 0s
+[sim]  boot          master 8s | worker1 8s | worker2 8s | worker3 8s
+[sim]  registration  worker1 0.7s | worker2 0.6s | worker3 0.7s   (serialized)
+[sim]  layers        w1 [0,2) | w2 [2,4) | w3 [4,6)
+[sim]  shard fetch   worker1 37s | worker2 38s | worker3 38s
+[sim]  final ring    3/3 worker(s)
+[sim]  generation    32 token(s) in 99.8s
+[sim]  latency       latency/token (avg over 32): ring rtt 2943042 us = compute 393747 us + network 2549295 us | master 286136 us | 0.3 tok/s
+[sim]  rpc drops     malformed 0 | rate-limited 0 | bad-prog 0 | unknown-proc 0
+[sim]  logs          /tmp/distinf_sim/{master,worker1..N}.log
+[sim]  result        PASS
+[sim] =====================================================
+[sim] PASS

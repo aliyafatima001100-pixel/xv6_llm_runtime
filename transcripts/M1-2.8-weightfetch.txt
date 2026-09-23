@@ -1,0 +1,12 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0 -- /home/abdul_rahim/xv6_llm_runtime/.venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/abdul_rahim/xv6_llm_runtime
+collecting ... collected 4 items
+
+server/weightfetch_regression_test.py::test_range_fetch_is_byte_exact[range_digest_aligned] PASSED [ 25%]
+server/weightfetch_regression_test.py::test_range_fetch_is_byte_exact[range_digest_unaligned] PASSED [ 50%]
+server/weightfetch_regression_test.py::test_undeclared_flow_is_rate_limited PASSED [ 75%]
+server/weightfetch_regression_test.py::test_worker_survives_absent_master PASSED [100%]
+
+============================== 4 passed in 26.68s ==============================

@@ -1,0 +1,67 @@
+Script started on 2026-09-21 22:16:55+05:00 [COMMAND="./boot.sh" TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="120" LINES="30"]
+
+xv6 kernel is booting
+
+Scheduler: Round Robin (Default)
+hart 2 starting
+hart 1 starting
+init: starting sh
+$ llama -t 0 -n 32 -i "Once upon a time"
+[35m No cached data found for llm_weights. Fetching from server...[0m
+[32mPASS    llm_weights fetched and cached in shared memory (ID: 0).
+[0m
+[35m No cached data found for llm_tokenizer. Fetching from server...[0m
+[32mPASS    llm_tokenizer fetched and cached in shared memory (ID: 1).
+[0m
+thread_create: sharing user memory with main process (pid=3)
+thread_create: sharing user memory with main process (pid=3)
+thread_create: sharing user memory with main process (pid=3)
+Once upon a time, there was a little girl named Lily. She loved to play outside in the sunshine. One day, she saw a big
+
+achieved tok/s: 5.974176
+
+==================================================================
+                       FUNCTION PROFILING
+==================================================================
+            Function    Calls Total(ms) Self(ms)  Avg(ms)  Time(%)
+------------------------------------------------------------------
+ fetch_model_weights        1    56610    56610 56610.00   89.83%
+              matmul     1376     4559     4640     3.31    7.36%
+     fetch_tokenizer        1      616      616   616.00    0.97%
+             forward       32     5265      461   164.53    0.73%
+              encode        1      336      336   336.00    0.53%
+            generate        1     5730      103  5730.00    0.16%
+ multihead_attention      192       78       94     0.40    0.14%
+             rmsnorm      416       35       71     0.08    0.11%
+   build_transformer        1       33       33    33.00    0.05%
+     build_tokenizer        1       22       23    22.00    0.03%
+              sample       28       13       15     0.46    0.02%
+              decode       32        5       10     0.15    0.01%
+       build_sampler        1        1        1     1.00    0.00%
+==================================================================
+Total Time: 63123 ms
+
+==================================================================
+                     SYSTEM PERFORMANCE METRICS
+==================================================================
+
+MEMORY USAGE:
+          Initial      1.7 MB (1843200 bytes)
+             Peak     66.5 MB (69750784 bytes)
+            Final     66.5 MB (69750784 bytes)
+
+TIMING:
+     Total (E2EL)    63123 ms
+        Inference     5189 ms
+
+LLM METRICS:
+             TTFT    58696 ms
+
+THROUGHPUT:
+        Generated       31 tokens
+             Rate     5.97 tokens/sec
+==================================================================
+
+$ QEMU: Terminated
+
+Script done on 2026-09-21 22:20:46+05:00 [COMMAND_EXIT_CODE="0"]

@@ -1,0 +1,169 @@
+Script started on 2026-09-21 23:31:19+05:00 [COMMAND="./boot.sh" TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="173" LINES="44"]
+
+xv6 kernel is booting
+
+Scheduler: Round Robin (Default)
+init: starting sh
+$ llama -t 0 -n 32 -i "Once upon a time"
+[35m No cached data found for llm_weights. Fetching from server...[0m
+[32mPASS    llm_weights fetched and cached in shared memory (ID: 0).
+[0m
+[35m No cached data found for llm_tokenizer. Fetching from server...[0m
+[32mPASS    llm_tokenizer fetched and cached in shared memory (ID: 1).
+[0m
+thread_create: sharing user memory with main process (pid=3)
+thread_create: sharing user memory with main process (pid=3)
+thread_create: sharing user memory with main process (pid=3)
+Once upon a time, there was a little girl named Lily. She loved to play outside in the sunshine. One day, she saw a big
+
+achieved tok/s: 3.167467
+
+==================================================================
+                       FUNCTION PROFILING
+==================================================================
+            Function    Calls Total(ms) Self(ms)  Avg(ms)  Time(%)
+------------------------------------------------------------------
+ fetch_model_weights        1    53400    53400 53400.00   82.10%
+              matmul     1376     9663     9709     7.02   14.92%
+     fetch_tokenizer        1     1102     1102  1102.00    1.69%
+              encode        1      263      263   263.00    0.40%
+             forward       32    10097      260   315.53    0.39%
+            generate        1    10447       70 10447.00    0.10%
+ multihead_attention      192       63       69     0.32    0.10%
+   build_transformer        1       66       66    66.00    0.10%
+             rmsnorm      416       39       60     0.09    0.09%
+     build_tokenizer        1       23       23    23.00    0.03%
+              sample       28        9       11     0.32    0.01%
+              decode       32        4        5     0.12    0.00%
+       build_sampler        1        2        2     2.00    0.00%
+==================================================================
+Total Time: 65145 ms
+
+==================================================================
+                     SYSTEM PERFORMANCE METRICS
+==================================================================
+
+MEMORY USAGE:
+          Initial      1.7 MB (1843200 bytes)
+             Peak     66.5 MB (69746688 bytes)
+            Final     66.5 MB (69746688 bytes)
+
+TIMING:
+     Total (E2EL)    65145 ms
+        Inference     9787 ms
+
+LLM METRICS:
+             TTFT    56985 ms
+
+THROUGHPUT:
+        Generated       31 tokens
+             Rate     3.16 tokens/sec
+==================================================================
+
+$ llama -t 0 -n 32 -i "The quick brown fox"
+[32mPASS    Cached data found (segment: llm_weights, ID: 0). Ready for use.[0m
+[32mPASS    Cached data found (segment: llm_tokenizer, ID: 1). Ready for use.[0m
+thread_create: sharing user memory with main process (pid=7)
+thread_create: sharing user memory with main process (pid=7)
+thread_create: sharing user memory with main process (pid=7)
+The quick brown fox was walking through the forest. He was looking for something to eat. Suddenly, he saw a big, juicy apple.
+
+achieved tok/s: 4.598724
+
+==================================================================
+                       FUNCTION PROFILING
+==================================================================
+            Function    Calls Total(ms) Self(ms)  Avg(ms)  Time(%)
+------------------------------------------------------------------
+              matmul     1376     6630     6675     4.81   93.25%
+             forward       32     6906      170   215.81    2.37%
+              encode        1      134      134   134.00    1.87%
+ multihead_attention      192       40       45     0.20    0.62%
+            generate        1     7089       36  7089.00    0.50%
+   build_transformer        1       22       22    22.00    0.30%
+ fetch_model_weights        1       19       19    19.00    0.26%
+             rmsnorm      416       11       19     0.02    0.26%
+     fetch_tokenizer        1       15       15    15.00    0.20%
+     build_tokenizer        1       11       12    11.00    0.16%
+              sample       27        8        9     0.29    0.12%
+       build_sampler        1        1        1     1.00    0.01%
+              decode       32        1        1     0.03    0.01%
+==================================================================
+Total Time: 7213 ms
+
+==================================================================
+                     SYSTEM PERFORMANCE METRICS
+==================================================================
+
+MEMORY USAGE:
+          Initial     60.2 MB (63193088 bytes)
+             Peak     66.5 MB (69795840 bytes)
+            Final     66.5 MB (69795840 bytes)
+
+TIMING:
+     Total (E2EL)     7213 ms
+        Inference     6741 ms
+
+LLM METRICS:
+             TTFT     1793 ms
+
+THROUGHPUT:
+        Generated       31 tokens
+             Rate     4.59 tokens/sec
+==================================================================
+
+$ llama -t 0 -n 32 -i "In the beginning"
+[32mPASS    Cached data found (segment: llm_weights, ID: 0). Ready for use.[0m
+[32mPASS    Cached data found (segment: llm_tokenizer, ID: 1). Ready for use.[0m
+thread_create: sharing user memory with main process (pid=11)
+thread_create: sharing user memory with main process (pid=11)
+thread_create: sharing user memory with main process (pid=11)
+In the beginning of the village, there was a little girl named Lucy. She was three years old and loved to explore. One day, she was walking through
+
+achieved tok/s: 4.704811
+
+==================================================================
+                       FUNCTION PROFILING
+==================================================================
+            Function    Calls Total(ms) Self(ms)  Avg(ms)  Time(%)
+------------------------------------------------------------------
+              matmul     1376     6428     6467     4.67   92.26%
+             forward       32     6754      198   211.06    2.82%
+              encode        1      134      134   134.00    1.91%
+ multihead_attention      192       53       58     0.27    0.82%
+            generate        1     6935       42  6935.00    0.59%
+             rmsnorm      416       24       33     0.05    0.47%
+   build_transformer        1       27       27    27.00    0.38%
+ fetch_model_weights        1       18       18    18.00    0.25%
+     fetch_tokenizer        1       16       16    16.00    0.22%
+     build_tokenizer        1       12       12    12.00    0.17%
+              sample       29        2        2     0.06    0.02%
+       build_sampler        1        1        1     1.00    0.01%
+              decode       32        0        1     0.00    0.01%
+==================================================================
+Total Time: 7065 ms
+
+==================================================================
+                     SYSTEM PERFORMANCE METRICS
+==================================================================
+
+MEMORY USAGE:
+          Initial     60.3 MB (63234048 bytes)
+             Peak     66.5 MB (69832704 bytes)
+            Final     66.5 MB (69832704 bytes)
+
+TIMING:
+     Total (E2EL)     7065 ms
+        Inference     6589 ms
+
+LLM METRICS:
+             TTFT     1300 ms
+
+THROUGHPUT:
+        Generated       31 tokens
+             Rate     4.70 tokens/sec
+==================================================================
+
+$ QEMU: Terminated
+
+Script done on 2026-09-21 23:33:13+05:00 [COMMAND_EXIT_CODE="0"]
